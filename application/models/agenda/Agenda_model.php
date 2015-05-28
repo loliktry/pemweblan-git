@@ -7,12 +7,14 @@ class Agenda_model extends CI_Model {
 	function insert_agenda($data){
 		$this->db->insert('agenda', $data);
 	}
+
 	function select_all(){
 		$this->db->select('*');
 		$this->db->from('agenda');
 		$this->db->order_by('date_modified', 'desc');
 		return $this->db->get();
 	}
+	
 	function select_by_id($id_agenda){
 		$this->db->select('*');
 		$this->db->from('agenda');
@@ -36,6 +38,14 @@ class Agenda_model extends CI_Model {
 		$this->db->limit($limit['perpage'], $limit['offset']);
 		return $this->db->get()->result();
 	}
+
+	function select_by_nama($nama){
+		$this->db->select('*');
+		$this->db->from('agenda');
+		$this->db->like('nama', $nama, 'both');
+		return $this->db->get();
+	}
+
 
 	function tambahfile($data){
 		$this->db->insert('datafile', $data);

@@ -5,6 +5,8 @@ class Admin extends CI_Controller {
         parent::__construct();
         $this->load->model('account/user_model');
         $this->load->helper('url');
+        //$this->load->helper('Helper Name');
+
         /*$this->load->helper('form');
         $this->load->library('form_validation','session');*/
 

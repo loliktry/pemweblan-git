@@ -5,6 +5,8 @@ class Cetak extends CI_Controller {
 		$this->load->model('account/user_model');
 		$this->load->helper('url');
 		$this->load->helper('form');
+		//pemanggilan library pdf
+
 		$this->load->library('pdf');
 		//$this->load->library('pdf');
 
@@ -16,7 +18,7 @@ class Cetak extends CI_Controller {
 		//this the the PDF filename that user will get to download
 		$pdfFilePath = "output_pdf_name.pdf";
 		//load mPDF library
-		$this->load->library('pdf');
+		//$this->load->library('pdf');
 		$pdf = $this->pdf->load(); 
 		$pdf->defaultheaderline = 1;
 	    $pdf->defaultfooterline = 1;

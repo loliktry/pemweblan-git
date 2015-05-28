@@ -21,7 +21,7 @@
 			<br /><br />
 			<div id="view-form">
 			</div>
-			<br/>
+
 			<div id="view-list-agenda">
 			</div>
 		</section><!-- /.content -->
@@ -40,10 +40,12 @@ $(document).ready(function(){
 	});
 	// menampilkan form tambah agenda
 	$("#show-form-tambah-agenda").click(function(){
+		//alert("masuk sini tambah");
 		$("#view-form").load('<?php echo site_url('ajaxsample/tambah_agenda');?>');
 	});
 	// menampilkan form cari agenda
 	$("#show-form-cari-agenda").click(function(){
+		//alert("masuk sini cari");
 		$("#view-form").load('<?php echo site_url('ajaxsample/cari_agenda');?>');
 	});
 });
